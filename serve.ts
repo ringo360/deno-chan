@@ -6,7 +6,7 @@ console.log("About me: https://ringoxd.pages.dev/");
 
 const app = express();
 
-app.use((req, next) => {
+app.use((req) => {
     const now = new Date();
     const clientIP = req.ip; // クライアントのIPを取得
     const requestInfo = `${req.method} ${decodeURIComponent(req.originalUrl)}`; // リクエストのメソッドとURL
@@ -14,7 +14,6 @@ app.use((req, next) => {
 	console.log(userAgent)
     console.log(`[${now.toLocaleString()}] - Client IP: ${clientIP}, Request: ${requestInfo}`);
 
-    next();
 });
 
 app.get("/", (req, res) => {

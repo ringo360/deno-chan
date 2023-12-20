@@ -1,3 +1,5 @@
+// @deno-types="npm:@types/express@4.17.15"
+import express from "npm:express@4.18.2";
 import { serve } from "https://deno.land/std@0.140.0/http/server.ts";
 
 console.log("Created by ringoXD.");
